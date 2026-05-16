@@ -1,0 +1,16 @@
+{
+  "name": "sprote-marketplace",
+  "owner": {
+    "name": "TTB",
+    "email": "js.yoo@ttb.kr",
+    "url": "https://github.com/ttbsoft"
+  },
+  "plugins": [
+    {
+      "name": "sprote",
+      "source": "./",
+      "description": "sprote — 단일 진입점으로 하네스·디자인·PM·sLLM·코드·문서 작업을 통합.",
+      "version": "2.2.1"
+    }
+  ]
+}

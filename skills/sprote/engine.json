@@ -1,0 +1,23 @@
+{
+  "orchestrator_model": "sonnet",
+  "runtime": "auto",
+  "capabilities": {
+    "codex_cli": "auto",
+    "opus_review": "auto",
+    "subagents": "auto"
+  },
+  "_comment": {
+    "orchestrator_model": "메인 작업 모델. 변경 시 /model <값>으로 세션 모델도 맞춰야 함",
+    "runtime": "auto|claude|ollama|compatible_cli — 자기 신고. auto면 capability로 추정",
+    "capabilities.codex_cli": "true|false|auto — `which codex` 결과 (auto는 setup이 감지)",
+    "capabilities.opus_review": "true|false|auto — Anthropic Opus 라우팅 가능 여부",
+    "capabilities.subagents": "true|false|auto — Agent 도구 가용 여부",
+    "_review_fallback_chain": [
+      "1순위: codex_cli=true → codex가 리뷰·자동 수정 (workspace-write sandbox)",
+      "2순위: opus_review=true → Opus advisor 권고 → Sonnet이 패치 적용",
+      "3순위: 둘 다 false → 동일 모델 재분석 + Single-engine 신뢰도 경고"
+    ],
+    "_valid_orchestrator_models": ["opus", "sonnet", "haiku"],
+    "_deprecated": "engine_mode 필드는 v2.2.0부터 deprecated. 자동 폴백 체인이 대체"
+  }
+}

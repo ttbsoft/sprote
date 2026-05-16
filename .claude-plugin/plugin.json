@@ -1,0 +1,18 @@
+{
+  "name": "sprote",
+  "description": "sprote — 너를 위해 존재한다. 단일 진입점으로 하네스 자동화·디자인·PM·sLLM·코드 작업·문서 생성을 통합한 Claude Code 플러그인.",
+  "version": "2.0.1",
+  "author": {
+    "name": "TTB",
+    "url": "https://github.com/ttbsoft"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sprote",
+    "skill-factory",
+    "codex",
+    "agent-team",
+    "design",
+    "pm-workflow"
+  ]
+}
